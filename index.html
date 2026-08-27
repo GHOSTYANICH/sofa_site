@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furni — Modern Interior Design Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/reset.css">
+</head>
+
+<body>
+
+    <div id="toast" class="toast"></div>
+
+    <!-- HEADER -->
+    <header class="site-header" id="siteHeader">
+        <div class="container header-inner">
+            <a href="#home" class="logo">Furni</a>
+
+            <button class="burger" id="burgerBtn" aria-label="Меню" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="nav" id="mainNav">
+                <a href="#home" class="nav-link active" data-nav>Home</a>
+                <a href="#about" class="nav-link" data-nav>about us</a>
+                <a href="#services" class="nav-link" data-nav>Services</a>
+                <a href="#services" class="nav-link" data-nav>Blog</a>
+                <a href="#services" class="nav-link" data-nav>Contact us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-dots" aria-hidden="true"></div>
+        <div class="container hero-inner">
+            <div class="hero-copy reveal">
+                <h1>Modern Interior<br>Design Studio</h1>
+                <div class="hero-btns">
+                    <button class="btn btn-primary" id="shopNowBtn" data-scroll-to="#about">Shop Now</button>
+                    <button class="btn btn-outline" id="heroExploreBtn" data-scroll-to="#about">Explore</button>
+                </div>
+            </div>
+
+            <div class="hero-visual reveal">
+                <img src="/imgs/couch main.png" alt="Бархатный диван изумрудного цвета" class="sofa-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT / MATERIAL -->
+    <section class="about" id="about">
+        <div class="container about-inner">
+            <div class="about-copy reveal">
+                <h2>Crafted with<br>excellent<br>material.</h2>
+                <p>Donec mattis porta eros, aliquet <br> finibus risus interdum at. Nulla <br> vivethe as it was for us to know <br>
+                    what was to be done.</p>
+                <button class="btn btn-dark" id="exploreBtn" data-scroll-to="#productGrid">Explore</button>
+            </div>
+
+            <div class="product-grid" id="productGrid">
+                <article class="product-card reveal">
+                    <img src="/imgs/product-1.png"
+                        alt="Nordic CHAIR" class="product-thumb">
+                    <h4>Nordic CHAIR</h4>
+                    <span class="price">$50.00</span>
+                </article>
+                <article class="product-card reveal">
+                    <img src="/imgs/product-2.png"
+                        alt="Kruzo Aero Chair" class="product-thumb">
+                    <h4>Kruzo Aero Chair</h4>
+                    <span class="price">$78.00</span>
+                </article>
+                <article class="product-card reveal">
+                    <img src="/imgs/product-3.png"
+                        alt="Ergonomic Chair" class="product-thumb">
+                    <h4>Ergonomic Chair</h4>
+                    <span class="price">$43.00</span>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why" id="services">
+        <div class="container why-inner">
+            <div class="why-dots" aria-hidden="true"></div>
+            <div class="why-copy reveal">
+                <h2>Why Choose Us</h2>
+                <p>Donec mattis porta eros, aliquet finibus risus interdum at. Nulla vivethe as it was for us to know
+                    what was to be done. the</p>
+
+                <div class="why-grid">
+                    <div class="why-item">
+                        <div class="why-icon" aria-hidden="true">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8">
+                                <rect x="1" y="7" width="14" height="9" rx="1" />
+                                <path d="M15 10h4l3 3v3h-7z" />
+                                <circle cx="6" cy="18" r="1.6" />
+                                <circle cx="18" cy="18" r="1.6" />
+                            </svg>
+                        </div>
+                        <h4>Fast &amp; Free Shipping</h4>
+                        <p>Donec mattis porta eros, aliquet <br> finibus risus interdum at. Nulla <br> vivethe as it was</p>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon" aria-hidden="true">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8">
+                                <path d="M6 8V6a4 4 0 118 0v2" />
+                                <rect x="3" y="8" width="14" height="12" rx="2" />
+                            </svg>
+                        </div>
+                        <h4>Easy to Shop</h4>
+                        <p>Donec mattis porta eros, aliquet <br> finibus risus interdum at. Nulla <br> vivethe as it was</p>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon" aria-hidden="true">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8">
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M12 7v5l3 2" />
+                            </svg>
+                        </div>
+                        <h4>24/7 Support</h4>
+                        <p>Donec mattis porta eros, aliquet <br> finibus risus interdum at. Nulla <br> vivethe as it was</p>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon" aria-hidden="true">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8">
+                                <path d="M4 4v5h5" />
+                                <path d="M20 20v-5h-5" />
+                                <path d="M5 9a7 7 0 0112-4M19 15a7 7 0 01-12 4" />
+                            </svg>
+                        </div>
+                        <h4>Hassle Free Returns</h4>
+                        <p>Donec mattis porta eros, aliquet <br> finibus risus interdum at. Nulla <br> vivethe as it was</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="why-visual reveal">
+                <img src="/imgs/Mask group.png"
+                    alt="Уютная гостиная с креслом" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
