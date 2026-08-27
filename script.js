@@ -10,46 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     toastTimer = setTimeout(() => toastEl.classList.remove('show'), 2200);
   }
 
-  /* ---------- Smooth scroll for nav links + buttons ---------- */
-  const header = document.getElementById('siteHeader');
-  const headerHeight = () => header.offsetHeight;
-
-  function scrollToTarget(hash) {
-    const target = document.querySelector(hash);
-    if (!target) return;
-    const top = target.getBoundingClientRect().top + window.pageYOffset - headerHeight() + 1;
-    window.scrollTo({ top, behavior: 'smooth' });
-  }
-
-  document.querySelectorAll('[data-nav]').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      scrollToTarget(link.getAttribute('href'));
-      closeMobileNav();
-    });
-  });
-
-  document.querySelectorAll('[data-scroll-to]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const hash = btn.getAttribute('data-scroll-to');
-      scrollToTarget(hash);
-
-      // small visual confirmation the button actually did something
-      const target = document.querySelector(hash);
-      if (target && target.classList.contains('product-grid')) {
-        target.classList.remove('pulse');
-        // pulse each card briefly to draw the eye
-        void target.offsetWidth;
-        target.querySelectorAll('.product-card').forEach((card, i) => {
-          setTimeout(() => {
-            card.classList.add('pulse');
-            setTimeout(() => card.classList.remove('pulse'), 700);
-          }, i * 90);
-        });
-      }
-    });
-  });
-
   /* ---------- Active nav link on scroll (scrollspy) ---------- */
   const sections = ['home', 'about', 'services']
     .map(id => document.getElementById(id))
