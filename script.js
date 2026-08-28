@@ -10,6 +10,46 @@ document.addEventListener('DOMContentLoaded', () => {
     toastTimer = setTimeout(() => toastEl.classList.remove('show'), 2200);
   }
 
+  /* ---------- Smooth scroll for nav links + buttons ---------- */
+  const header = document.getElementById('siteHeader');
+  const headerHeight = () => header.offsetHeight;
+
+  function scrollToTarget(hash) {
+    const target = document.querySelector(hash);
+    if (!target) return;
+    const top = target.getBoundingClientRect().top + window.pageYOffset - headerHeight() + 1;
+    window.scrollTo({ top, behavior: 'smooth' });
+  }
+
+  document.querySelectorAll('[data-nav]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      scrollToTarget(link.getAttribute('href'));
+      closeMobileNav();
+    });
+  });
+
+  document.querySelectorAll('[data-scroll-to]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const hash = btn.getAttribute('data-scroll-to');
+      scrollToTarget(hash);
+
+      // small visual confirmation the button actually did something
+      const target = document.querySelector(hash);
+      if (target && target.classList.contains('product-grid')) {
+        target.classList.remove('pulse');
+        // pulse each card briefly to draw the eye
+        void target.offsetWidth;
+        target.querySelectorAll('.product-card').forEach((card, i) => {
+          setTimeout(() => {
+            card.classList.add('pulse');
+            setTimeout(() => card.classList.remove('pulse'), 700);
+          }, i * 90);
+        });
+      }
+    });
+  });
+
   /* ---------- Active nav link on scroll (scrollspy) ---------- */
   const sections = ['home', 'about', 'services']
     .map(id => document.getElementById(id))
@@ -68,5 +108,120 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.15 });
   revealEls.forEach(el => revealObserver.observe(el));
+
+  /* ---------- Testimonials slider ---------- */
+  const testimonials = [
+    {
+      quote: '«Donec nibh magna, interdum quis massa sed, rhoncus laoreet quam. Mauris accumsan felis fermentum euismod egestas. Mauris ante augue, cursus sit amet arcu a, maximus suscipit nibh.»',
+      name: 'Michelle Anna',
+      role: 'CEO, Co-Founder, XYZ Inc.',
+      initials: 'MA',
+      color: '#e39ec4'
+    },
+    {
+      quote: '«Интерьер полностью преобразил нашу квартиру. Команда учла каждую деталь и выполнила заказ быстрее, чем мы ожидали, не потеряв в качестве.»',
+      name: 'David Kern',
+      role: 'Product Designer, Nova Studio',
+      initials: 'DK',
+      color: '#7fa88f'
+    },
+    {
+      quote: '«От первой консультации до финальной доставки всё прошло легко. Мебель идеально вписалась в пространство, а качество материалов выше всяких похвал.»',
+      name: 'Sara Lopez',
+      role: 'Marketing Lead, Bright Co.',
+      initials: 'SL',
+      color: '#d9a441'
+    },
+    {
+      quote: '«Мы полностью обновили офис вместе с Furni, и атмосфера на работе изменилась к лучшему. Очень рекомендуем их дизайн-консультацию.»',
+      name: 'James Whitfield',
+      role: 'Founder, Whitfield & Co.',
+      initials: 'JW',
+      color: '#5b7fa6'
+    },
+    {
+      quote: '«Надёжно, творчески и всегда вовремя. Каждый предмет мебели пришёл именно таким, каким был на фото, а поддержка была на высоте.»',
+      name: 'Elena Novak',
+      role: 'Interior Architect, Studio EN',
+      initials: 'EN',
+      color: '#a97cb3'
+    },
+    {
+      quote: '«Команда помогла подобрать вещи, которые подошли и под бюджет, и под стиль. Редко встретишь студию, которая сочетает доступность с настоящим мастерством.»',
+      name: 'Marco Rossi',
+      role: 'Homeowner',
+      initials: 'MR',
+      color: '#c9784f'
+    },
+    {
+      quote: '«Наши клиенты постоянно хвалят пространство, которое мы создали вместе с Furni. Внимание к деталям в каждой рекомендации по-настоящему выделяет их.»',
+      name: 'Priya Nair',
+      role: 'Real Estate Developer, Nair Group',
+      initials: 'PN',
+      color: '#4f9d8a'
+    },
+    {
+      quote: '«Больше всего впечатлило то, как хорошо они поняли нашу идею уже после одного разговора. Итоговый результат превзошёл все ожидания.»',
+      name: 'Tom Becker',
+      role: 'Co-Founder, Becker Living',
+      initials: 'TB',
+      color: '#b3a34f'
+    }
+  ];
+
+  const quoteEl = document.getElementById('testimonialQuote');
+  const authorWrap = document.querySelector('.testimonial-author');
+  const avatarEl = document.getElementById('testimonialAvatar');
+  const nameEl = document.getElementById('testimonialName');
+  const roleEl = document.getElementById('testimonialRole');
+  const dotsWrap = document.getElementById('testimonialDots');
+  const prevBtn = document.getElementById('prevTestimonial');
+  const nextBtn = document.getElementById('nextTestimonial');
+
+  if (quoteEl && dotsWrap && prevBtn && nextBtn) {
+    let current = 0;
+    let autoTimer;
+
+    testimonials.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'testimonial-dot';
+      dot.setAttribute('aria-label', `Отзыв ${i + 1}`);
+      dot.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(dot);
+    });
+    const dotEls = Array.from(dotsWrap.children);
+
+    function render(i) {
+      const t = testimonials[i];
+      quoteEl.textContent = t.quote;
+      avatarEl.textContent = t.initials;
+      avatarEl.style.background = t.color;
+      nameEl.textContent = t.name;
+      roleEl.textContent = t.role;
+      dotEls.forEach((d, idx) => d.classList.toggle('active', idx === i));
+    }
+
+    function goTo(i) {
+      current = (i + testimonials.length) % testimonials.length;
+      quoteEl.classList.add('fade');
+      authorWrap.classList.add('fade');
+      setTimeout(() => {
+        render(current);
+        quoteEl.classList.remove('fade');
+        authorWrap.classList.remove('fade');
+      }, 200);
+    }
+
+    function restartAuto() {
+      clearInterval(autoTimer);
+      autoTimer = setInterval(() => goTo(current + 1), 6000);
+    }
+
+    prevBtn.addEventListener('click', () => { goTo(current - 1); restartAuto(); });
+    nextBtn.addEventListener('click', () => { goTo(current + 1); restartAuto(); });
+
+    render(current);
+    restartAuto();
+  }
 
 });
