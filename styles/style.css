@@ -113,7 +113,7 @@ img {
 }
 
 .btn-outline {
-    border-color: rgba(255, 255, 255, 0.6);
+    border-color: #748c83;
     color: #fff;
     background-color: #3B5D50;
 }
@@ -766,7 +766,7 @@ img {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: var(--gold);
+    background: #3B5D50;
 }
 
 /* ===== Testimonials ===== */
@@ -1167,7 +1167,7 @@ img {
     flex-direction: column;
     gap: 12px;
     justify-content: center;
-    padding-bottom: 61px;
+    padding-bottom: 61  px;
 }
 
 .footer-col-brand .logo {
