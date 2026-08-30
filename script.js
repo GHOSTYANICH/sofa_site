@@ -112,56 +112,56 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- Testimonials slider ---------- */
   const testimonials = [
     {
-      quote: '«Donec nibh magna, interdum quis massa sed, rhoncus laoreet quam. Mauris accumsan felis fermentum euismod egestas. Mauris ante augue, cursus sit amet arcu a, maximus suscipit nibh. ⭐⭐⭐⭐⭐»',
+      quote: '«Donec nibh magna, interdum quis massa sed, rhoncus laoreet quam. Mauris accumsan felis fermentum euismod egestas. Mauris ante augue, cursus sit amet arcu a, maximus suscipit nibh.»',
       name: 'Michelle Anna',
       role: 'CEO, Co-Founder, XYZ Inc.',
       initials: 'MA',
       color: '#e39ec4'
     },
     {
-      quote: '«Интерьер полностью преобразил нашу квартиру. Команда учла каждую деталь и выполнила заказ быстрее, чем мы ожидали, не потеряв в качестве. ⭐⭐⭐⭐⭐»',
+      quote: '«Donec nibh magna, interdum quis massa sed, rhoncus laoreet quam. Mauris accumsan felis fermentum euismod egestas. Mauris ante augue, cursus sit amet arcu a, maximus suscipit nibh.»',
       name: 'David Kern',
       role: 'Product Designer, Nova Studio',
       initials: 'DK',
       color: '#7fa88f'
     },
     {
-      quote: '«От первой консультации до финальной доставки всё прошло легко. Мебель идеально вписалась в пространство, а качество материалов выше всяких похвал. ⭐⭐⭐⭐⭐»',
+      quote: '«Donec nibh magna, interdum quis massa sed, rhoncus laoreet quam. Mauris accumsan felis fermentum euismod egestas. Mauris ante augue, cursus sit amet arcu a, maximus suscipit nibh.»',
       name: 'Sara Lopez',
       role: 'Marketing Lead, Bright Co.',
       initials: 'SL',
       color: '#d9a441'
     },
     {
-      quote: '«Мы полностью обновили офис вместе с Furni, и атмосфера на работе изменилась к лучшему. Очень рекомендуем их дизайн-консультацию. ⭐⭐⭐⭐⭐»',
+      quote: '«Donec nibh magna, interdum quis massa sed, rhoncus laoreet quam. Mauris accumsan felis fermentum euismod egestas. Mauris ante augue, cursus sit amet arcu a, maximus suscipit nibh.»',
       name: 'James Whitfield',
       role: 'Founder, Whitfield & Co.',
       initials: 'JW',
       color: '#5b7fa6'
     },
     {
-      quote: '«Надёжно, творчески и всегда вовремя. Каждый предмет мебели пришёл именно таким, каким был на фото, а поддержка была на высоте. ⭐⭐⭐⭐⭐»',
+      quote: '«Donec nibh magna, interdum quis massa sed, rhoncus laoreet quam. Mauris accumsan felis fermentum euismod egestas. Mauris ante augue, cursus sit amet arcu a, maximus suscipit nibh.»',
       name: 'Elena Novak',
       role: 'Interior Architect, Studio EN',
       initials: 'EN',
       color: '#a97cb3'
     },
     {
-      quote: '«Команда помогла подобрать вещи, которые подошли и под бюджет, и под стиль. Редко встретишь студию, которая сочетает доступность с настоящим мастерством. ⭐⭐⭐⭐⭐ »',
+      quote: '«Donec nibh magna, interdum quis massa sed, rhoncus laoreet quam. Mauris accumsan felis fermentum euismod egestas. Mauris ante augue, cursus sit amet arcu a, maximus suscipit nibh.»',
       name: 'Marco Rossi',
       role: 'Homeowner',
       initials: 'MR',
       color: '#c9784f'
     },
     {
-      quote: '«Наши клиенты постоянно хвалят пространство, которое мы создали вместе с Furni. Внимание к деталям в каждой рекомендации по-настоящему выделяет их. ⭐⭐⭐⭐⭐»',
+      quote: '«Donec nibh magna, interdum quis massa sed, rhoncus laoreet quam. Mauris accumsan felis fermentum euismod egestas. Mauris ante augue, cursus sit amet arcu a, maximus suscipit nibh.»',
       name: 'Priya Nair',
       role: 'Real Estate Developer, Nair Group',
       initials: 'PN',
       color: '#4f9d8a'
     },
     {
-      quote: '«Больше всего впечатлило то, как хорошо они поняли нашу идею уже после одного разговора. Итоговый результат превзошёл все ожидания. ⭐⭐⭐⭐⭐»',
+      quote: '«Donec nibh magna, interdum quis massa sed, rhoncus laoreet quam. Mauris accumsan felis fermentum euismod egestas. Mauris ante augue, cursus sit amet arcu a, maximus suscipit nibh.»',
       name: 'Tom Becker',
       role: 'Co-Founder, Becker Living',
       initials: 'TB',
