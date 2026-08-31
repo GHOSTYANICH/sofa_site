@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ---------- Active nav link on scroll (scrollspy) ---------- */
-  const sections = ['home', 'about', 'services']
+  const sections = ['home', 'about', 'services', 'blog', 'contact']
     .map(id => document.getElementById(id))
     .filter(Boolean);
   const navLinks = Array.from(document.querySelectorAll('.nav-link'));
