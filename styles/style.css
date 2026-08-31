@@ -116,6 +116,7 @@ img {
     border-color: #748c83;
     color: #fff;
     background-color: #3B5D50;
+    border-width: 2px;
 }
 
 .btn-outline:hover {
@@ -184,7 +185,7 @@ img {
     left: 0;
     bottom: 0;
     width: 0;
-    height: 2px;
+    height: 4px;
     background: var(--gold);
     transition: width var(--transition);
 }
@@ -324,13 +325,15 @@ img {
     border-radius: var(--radius-lg);
     padding: 26px 20px;
     text-align: center;
-    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition),
 }
 
 .product-card:hover {
     transform: translateY(-8px);
-    box-shadow: var(--shadow);
-    border-color: transparent;
+    background-color: #35736E33;
 }
 
 .product-card.pulse {
@@ -453,7 +456,6 @@ img {
     background-image: radial-gradient(circle,
             var(--gold) 4px,
             transparent 4px);
-
     background-size: 35px 24px;
 
     opacity: 0.55;
@@ -677,11 +679,11 @@ img {
 .collage-dots {
     position: absolute;
     top: -30px;
-    left: -34px;
-    width: 130px;
-    height: 150px;
-    background-image: radial-gradient(#a9c2b6 2px, transparent 2px);
-    background-size: 18px 18px;
+    left: -123px;
+    width: 287px;
+    height: 176px;
+    background-image: radial-gradient(circle, #a9c2b6 4px, transparent 4px);
+    background-size: 35px 24px;
     opacity: 0.8;
     z-index: 0;
 }
@@ -766,7 +768,9 @@ img {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: #3B5D50;
+    border: 2px solid #3B5D50;
+    background: transparent;
+    box-sizing: border-box;
 }
 
 /* ===== Testimonials ===== */
@@ -993,6 +997,7 @@ img {
     color: var(--ink);
     border-bottom: 1px solid transparent;
     transition: color var(--transition), border-color var(--transition);
+    color: #6A6A6A;
 }
 
 .read-more:hover {
@@ -1167,7 +1172,7 @@ img {
     flex-direction: column;
     gap: 12px;
     justify-content: center;
-    padding-bottom: 61  px;
+    padding-bottom: 61 px;
 }
 
 .footer-col-brand .logo {
