@@ -871,17 +871,18 @@ img {
 }
 
 .slider-arrow {
-    width: 48px;
+    width: 48px;            
     height: 48px;
     border-radius: 50%;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #e9e7e2;
+    background: var(--forest);
     color: var(--ink);
     flex-shrink: 0;
     transition: background var(--transition), color var(--transition), transform var(--transition);
+    color: #fff;
 }
 
 .slider-arrow--next {
@@ -894,11 +895,13 @@ img {
 }
 
 .slider-arrow--prev:hover {
-    background: #ddd9d1;
+    background: #fff;
+    color: black;
 }
 
 .slider-arrow--next:hover {
-    background: var(--forest-deep);
+    background: #fff;
+    color: black;
 }
 
 .testimonial-dots {
