@@ -325,6 +325,7 @@ img {
     border-radius: var(--radius-lg);
     padding: 26px 20px;
     text-align: center;
+    cursor: pointer;
     transition:
         transform var(--transition),
         box-shadow var(--transition),
@@ -1518,4 +1519,9 @@ img {
     font-family: var(--font-display);
     font-size: 1.45rem;
     font-weight: 700;
+}
+.featured-card:hover {
+    transform: translateY(-10px);
+    transition: 0.5s;
+    cursor: pointer;
 }
