@@ -462,204 +462,6 @@ img {
     opacity: 0.55;
 }
 
-/* ===== Blog ===== */
-.blog {
-    padding: 90px 0;
-}
-
-.blog-inner h3 {
-    font-size: 1.5rem;
-    margin-bottom: 26px;
-}
-
-.blog-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.blog-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    padding: 22px;
-    transition: transform var(--transition), box-shadow var(--transition);
-}
-
-.blog-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow);
-}
-
-.blog-tag {
-    display: inline-block;
-    font-size: 0.7rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--gold-deep);
-    margin-bottom: 10px;
-}
-
-.blog-card h4 {
-    font-size: 1rem;
-    font-family: var(--font-body);
-    font-weight: 700;
-}
-
-/* ===== Footer ===== */
-.footer {
-    padding: 40px 0 34px;
-    border-top: 1px solid var(--border);
-}
-
-.footer-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
-.footer-brand p {
-    font-size: 0.82rem;
-    margin-top: 4px;
-}
-
-.footer-contact {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    flex-wrap: wrap;
-}
-
-.contact-copy-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: none;
-    border: none;
-    color: var(--ink);
-    font-size: 0.85rem;
-    font-weight: 600;
-    transition: color var(--transition);
-}
-
-.contact-copy-btn:hover {
-    color: var(--gold-deep);
-}
-
-.footer-phone {
-    font-size: 0.85rem;
-    color: var(--ink-soft);
-}
-
-.footer-copy {
-    font-size: 0.8rem;
-}
-
-/* ===== Toast ===== */
-.toast {
-    position: fixed;
-    bottom: 24px;
-    left: 50%;
-    transform: translateX(-50%) translateY(20px);
-    background: var(--ink);
-    color: var(--cream);
-    padding: 13px 22px;
-    border-radius: 999px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 300;
-    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.4);
-}
-
-.toast.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0);
-}
-
-/* ===== Reveal on scroll ===== */
-.reveal {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.reveal.in-view {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 980px) {
-
-    .about-inner,
-    .why-inner {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-inner {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-visual {
-        order: -1;
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .blog-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 680px) {
-    .nav {
-        position: fixed;
-        top: 78px;
-        left: 0;
-        right: 0;
-        background: var(--forest);
-        flex-direction: column;
-        padding: 20px 24px 30px;
-        gap: 16px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        transform: translateY(-130%);
-        transition: transform var(--transition);
-        z-index: 99;
-    }
-
-    .nav.open {
-        transform: translateY(0);
-    }
-
-    .burger {
-        display: flex;
-    }
-
-    .product-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-
-@media (max-width: 460px) {
-    .product-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* ===== Intro / Collage ===== */
 .intro {
     padding: 100px 0;
@@ -1258,102 +1060,6 @@ img {
     color: var(--forest);
 }
 
-/* ===== Blog ===== */
-.blog {
-    padding: 90px 0;
-}
-
-.blog-inner h3 {
-    font-size: 1.5rem;
-    margin-bottom: 26px;
-}
-
-.blog-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.blog-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    padding: 22px;
-    transition: transform var(--transition), box-shadow var(--transition);
-}
-
-.blog-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow);
-}
-
-.blog-tag {
-    display: inline-block;
-    font-size: 0.7rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--gold-deep);
-    margin-bottom: 10px;
-}
-
-.blog-card h4 {
-    font-size: 1rem;
-    font-family: var(--font-body);
-    font-weight: 700;
-}
-
-/* ===== Footer ===== */
-.footer {
-    padding: 40px 0 34px;
-    border-top: 1px solid var(--border);
-}
-
-.footer-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
-.footer-brand p {
-    font-size: 0.82rem;
-    margin-top: 4px;
-}
-
-.footer-contact {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    flex-wrap: wrap;
-}
-
-.contact-copy-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: none;
-    border: none;
-    color: var(--ink);
-    font-size: 0.85rem;
-    font-weight: 600;
-    transition: color var(--transition);
-}
-
-.contact-copy-btn:hover {
-    color: var(--gold-deep);
-}
-
-.footer-phone {
-    font-size: 0.85rem;
-    color: var(--ink-soft);
-}
-
-.footer-copy {
-    font-size: 0.8rem;
-}
-
 /* ===== Toast ===== */
 .toast {
     position: fixed;
@@ -1391,9 +1097,114 @@ img {
     transform: translateY(0);
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 980px) {
+.logo2 {
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    font-weight: 700;
+}
 
+.featured-card:hover {
+    transform: translateY(-10px);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/* =====================================================================
+   RESPONSIVE / MOBILE FIXES
+   Everything below overrides the fixed, 2K-oriented values above so the
+   layout adapts to any screen width instead of only looking right on a
+   wide desktop monitor.
+   ===================================================================== */
+
+/* Decorative dot-grids were positioned with huge fixed pixel offsets
+   (right: 576px / 985px, left: -123px) tuned for a ~1920px+ canvas.
+   On narrow screens they land off-canvas or overlap real content, so we
+   simply hide them once the layout drops out of the desktop grid. */
+@media (max-width: 980px) {
+    .hero-dots,
+    .why-dots,
+    .collage-dots,
+    .testimonials-dots {
+        display: none;
+    }
+}
+
+/* Collage images (intro section) were hard-coded to 422px/291px wide,
+   which overflow any phone-width column. Make them fluid by default and
+   only switch to the original fixed 2K sizing on large screens. */
+.collage-main {
+    width: 62%;
+    height: 92%;
+}
+
+.collage-top {
+    width: 30%;
+    height: 34%;
+}
+
+.collage-bottom {
+    width: 44%;
+    height: 42%;
+}
+
+@media (min-width: 981px) {
+    .collage-main {
+        width: 422px;
+        height: 514px;
+    }
+
+    .collage-bottom {
+        width: 291px;
+        height: 349px;
+    }
+}
+
+/* "Why choose us" section had a fixed clamp(440px,58vh,620px) height with
+   overflow:hidden — fine as a deliberate crop on desktop, but on mobile
+   the column stacks (heading + 4 feature items + image) needs far more
+   vertical space than that, so most of it was getting clipped/hidden.
+   Let it grow naturally on narrower screens. */
+@media (max-width: 980px) {
+    .why {
+        height: auto;
+        overflow: visible;
+        padding-bottom: 60px;
+    }
+
+    .why-visual {
+        height: 360px;
+    }
+
+    .why-visual img {
+        width: 100%;
+    }
+}
+
+/* Copy blocks had a fixed max-width (320px / 420px) meant for a
+   two-column desktop layout. Once columns stack on mobile that just
+   wastes space and makes text wrap awkwardly, so let paragraphs use the
+   full column width instead. */
+@media (max-width: 980px) {
+    .about-copy p,
+    .why-copy > p,
+    .intro-copy > p {
+        max-width: none;
+    }
+}
+
+/* Several paragraphs contain hard-coded <br> tags used to control line
+   breaks on a wide desktop line length. On a narrow phone column those
+   breaks land mid-sentence and look broken, so we drop them below 680px
+   and let the text reflow naturally (headings keep their <br>, since
+   this rule only targets <br> inside <p>). */
+@media (max-width: 680px) {
+    p br {
+        display: none;
+    }
+}
+
+/* Main responsive breakpoints for grid/layout structure */
+@media (max-width: 980px) {
     .about-inner,
     .why-inner,
     .intro-inner {
@@ -1408,34 +1219,18 @@ img {
         order: -1;
     }
 
-    .product-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .blog-grid {
-        grid-template-columns: 1fr;
-    }
-
     .collage {
         height: 440px;
         margin-bottom: 40px;
-    }
-
-    .feature-row-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
     }
 
     .blog-grid-new {
         grid-template-columns: 1fr 1fr;
     }
 
-    .testi-slider {
+    .featured-products-inner {
         grid-template-columns: 1fr;
-    }
-
-    .testi-arrow {
-        display: none;
+        gap: 34px;
     }
 
     .newsletter-block {
@@ -1448,30 +1243,6 @@ img {
 
     .footer-columns {
         grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 520px) {
-    .intro-list {
-        grid-template-columns: 1fr;
-    }
-
-    .collage {
-        height: 360px;
-    }
-
-    .blog-grid-new {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-columns {
-        grid-template-columns: 1fr;
-    }
-
-    .blog-head {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
     }
 }
 
@@ -1502,10 +1273,29 @@ img {
     .product-grid {
         grid-template-columns: 1fr 1fr;
     }
+}
 
-    .footer-inner {
+@media (max-width: 520px) {
+    .intro-list {
+        grid-template-columns: 1fr;
+    }
+
+    .collage {
+        height: 360px;
+    }
+
+    .blog-grid-new {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-head {
         flex-direction: column;
         align-items: flex-start;
+        gap: 10px;
     }
 }
 
@@ -1513,15 +1303,12 @@ img {
     .product-grid {
         grid-template-columns: 1fr;
     }
-}
 
-.logo2 {
-    font-family: var(--font-display);
-    font-size: 1.45rem;
-    font-weight: 700;
-}
-.featured-card:hover {
-    transform: translateY(-10px);
-    transition: 0.5s;
-    cursor: pointer;
+    .featured-card {
+        flex-direction: column;
+    }
+
+    .featured-info p {
+        max-width: none;
+    }
 }
